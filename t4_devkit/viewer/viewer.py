@@ -404,7 +404,8 @@ class RerunViewer:
         # TODO(ktro2828): add support of rendering pointcloud on images
         rr.set_time_seconds(self.timeline, seconds)
 
-        colors = distance_color(np.linalg.norm(pointcloud.points[:3].T, axis=1))
+        # colors = distance_color(np.linalg.norm(pointcloud.points[:3].T, axis=1))
+        colors = distance_color(pointcloud.points[3, :].T)
         rr.log(
             format_entity(self.ego_entity, channel),
             rr.Points3D(

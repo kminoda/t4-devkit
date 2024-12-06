@@ -31,3 +31,6 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.ruff]
 line-length = 100
+
+[tool.poetry.scripts]
+t4-devkit = "t4_devkit.cli:cli"
